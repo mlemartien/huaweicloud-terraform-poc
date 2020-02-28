@@ -1,12 +1,17 @@
+variable "user_name" {}
+variable "password" {}
+variable "domain_name" {}
+variable "tenant_name" {}
+variable "region" {}
+variable "auth_url" {}
+
 provider "huaweicloudstack" {
-  // access_key   = ""
-  // secret_key    = ""
-  user_name = ""
-  password = ""
-  domain_name = "Tenant1"
-  tenant_name = "Tenant1"
-  // region = ""
-  auth_url = ""
+  user_name = var.user_name
+  password = var.password
+  domain_name = var.domain_name
+  tenant_name = var.tenant_name
+  region = var.region
+  auth_url = var.auth_url
   version = "~> 1.1"
   insecure = "true"
 }
@@ -22,3 +27,5 @@ resource "huaweicloudstack_compute_keypair_v2" "tf-keypair" {
   name = "tf-keypair"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAjpC1hwiOCCmKEWxJ4qzTTsJbKzndLotBCz5PcwtUnflmU+gHJtWMZKpuEGVi29h0A/+ydKek1O18k10Ff+4tyFjiHDQAnOfgWf7+b1yK+qDip3X1C0UPMbwHlTfSGWLGZqd9LvEFx9k3h/M+VtMvwR1lJ9LUyTAImnNjWG7TaIPmui30HvM2UiFEmqkr4ijq45MyX2+fLIePLRIF61p4whjHAQYufqyno3BS48icQb4p6iVEZPo4AE2o9oIyQvj2mx4dk5Y8CgSETOZTYDOR3rU2fZTRDRgPJDH9FWvQjF5tA0p3d9CoWWd2s6GKKbfoUIi8R/Db1BSPJwkqB"
 }
+
+// To be continued...
