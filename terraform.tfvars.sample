@@ -1,0 +1,6 @@
+user_name = "tenant_name"
+password = "password"
+domain_name = "domain_name"
+tenant_name = "tenant_name"
+region = "region"
+auth_url = "https://iam-apigateway-proxy.your-domain-name.com/v3"
